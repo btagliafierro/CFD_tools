@@ -1,5 +1,7 @@
-function [L]=Theorylength(T,d)
+function [L]=Theorylength(Period,depth)
 g=9.81;
+T=Period;
+d=depth;
 f=@(x) g*T^2/2/pi*tanh(2*pi*d/x)-x;
 f1=@(x) -g*d*(T/x)^2*sech(2*pi*d/x)^2-1;
 x=g*T^2/(2*pi); fail=0;
